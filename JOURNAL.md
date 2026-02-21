@@ -126,3 +126,35 @@
 -atm_machine.py
 
 ### ⏰ Time: 1 hours
+
+## Day 5 - February 21, 2026 ✅
+
+### ✅ Accomplished
+- Mastered Python functions!
+- Learned parameters, return values, default args
+- Built 10 function-based programs
+- Made 10 new commits (Total: ~38!)
+
+### 💡 Key Learnings
+1. Functions = reusable code blocks
+2. Parameters pass data IN, return sends data OUT
+3. Default parameters make functions flexible
+4. Functions organize code professionally
+5. DRY principle: Don't Repeat Yourself
+
+### 🔥 Programs Built
+1. function_calculator.py
+2. temperature_converter.py
+3. string_utilities.py
+4. math_helper.py
+5. password_generator.py
+6. grade_manager.py
+7. number_validator.py
+8. list_helper.py
+9. quiz_game.py
+10. function_showcase.py
+
+### 🏆 Proudest 
+password_generator.py
+
+### ⏰ Time: 2 hours
