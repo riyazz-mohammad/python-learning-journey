@@ -1,0 +1,20 @@
+============================================================
+   FINANCE REPORT - 2026-02-26
+============================================================
+
+SUMMARY:
+Total Income:   ₹8,000.00
+Total Expenses: ₹2,000.00
+Balance:        ₹6,000.00
+
+ALL TRANSACTIONS:
+------------------------------------------------------------
+[2026-02-26] income: Salary - ₹5000.0 - salary
+[2026-02-26] income: Freelance - ₹1200.0 - passive_income
+[2026-02-26] income: Investment - ₹1800.0 - bit_coin
+[2026-02-26] expenses: Food - ₹200.0 - food
+[2026-02-26] expenses: Bills - ₹800.0 - rent
+[2026-02-26] expenses: Healthcare - ₹150.0 - healthcare
+[2026-02-26] expenses: Entertainment - ₹100.0 - cinemas
+[2026-02-26] expenses: Others - ₹600.0 - others
+[2026-02-26] expenses: Transport - ₹150.0 - transport
