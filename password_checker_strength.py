@@ -1,3 +1,5 @@
+import random
+import string
 def check_password_strength(password):
     score=0
     feedback=[]
@@ -32,13 +34,68 @@ def check_password_strength(password):
 
     return score,feedback,strength
 
+def suggest_strong_password(length=12,useuppercase=True,uselowercase=True,use_digits=True,usespecialcharacter=True):
+    character=string.ascii_lowercase
+    if useuppercase:
+        character+=string.ascii_uppercase
+    if use_digits:
+        character+=string.digits
+    special_char='!@#$%^&*'
+    if usespecialcharacter:
+        character+=special_char
+    password=''.join(random.choice(character) for _ in range(length))
+    return password
+    
+
+def common_password(password):
+    common_password=['password', '12345678', 'qwerty', 'abc123', 'password123',
+        '123456789', 'letmein', 'welcome', 'monkey', 'dragon']
+    if password  in common_password:
+        return True,"This is commonly used password!"
+    if all(char.isdigit() for char in password):
+        return True,"All are digits-Weak password!"
+    if all(char.islower() for char in password):
+        return True,"All are lowercase letters-weak password!"
+    if all(char.isupper() for char in password):
+        return True,"All are upper_case letters-weak password!"
+    for i in range(len(password)-2):
+       if password[i]==password[i+1]==password[i+2]:
+         return True,"Contains repeated characters (like 'aaa' or '111')"
+    return False, "✅ Not a common password!"
+
+
+
+
+
+
 print("==PASSWORD STRENGTH CHECKER==")
-password=input("Enter your password to check strength..")
+try:
+    choice=int(input("Choose choice between 1(password checker) and 2(strong password generator)"))
+    if choice==1:
+        password=input("Enter your password to check strength..")
+        score,feedback,strength=check_password_strength(password)
 
-score,feedback,strength=check_password_strength(password)
-print(f"\n Strength:{strength} ({score}/5)")
+        is_common, message = common_password(password)
+        if is_common:
+            print(message)
+            score -= 1
 
-if feedback:
-    print("\nImprovement Suggestions:")
-    for tip in feedback:
-        print(f"{tip}")
+
+        
+        print(f"\n Strength:{strength} ({score}/5)")
+
+        if feedback:
+            print("\nImprovement Suggestions:")
+            for tip in feedback:
+                print(f"{tip}")
+
+
+    elif choice==2:
+        password=suggest_strong_password()
+        print(password)
+except ValueError:
+    print("Invalid choice!")
+
+
+
+
