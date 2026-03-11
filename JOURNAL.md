@@ -374,3 +374,85 @@ The 'with' statement automatically closes the file even if errors occur.
 ## Time Spent: 2.5 hours
 ## Streak: 🔥🔥 Day 2/149
 ## Feeling: UNSTOPPABLE! Two perfect days! 🚀
+
+# Day 10 - March 10, 2026
+
+## What I Built
+Contact Manager with JSON + CSV:
+1. Add contact (with auto-ID)
+2. View all contacts (formatted table)
+3. Search contacts (by name)
+4. Delete contact (by ID)
+5. Edit contact (keep current values) - Custom!
+6. Export to CSV (full backup) - Custom!
+7. Import from CSV (restore data) - Custom!
+8. JSON persistence (auto-load/save)
+
+## What I Learned Deeply
+
+### JSON (JavaScript Object Notation):
+- Lightweight data format for storing/exchanging data
+- Used in: APIs, config files, web applications
+- Structured, easy to parse, human-readable
+- Python dict/list ↔ JSON object/array conversion
+
+### JSON Operations:
+- json.dump(): Python → JSON file
+  - indent=4: Makes it human-readable
+  - Without indent: Compact but hard to read
+- json.load(): JSON file → Python
+  - Returns dict/list based on JSON structure
+
+### CSV Module (Self-learned!):
+- csv.DictWriter(): Write dicts to CSV
+  - writeheader(): Writes column names
+  - writerows(): Writes all data rows
+- csv.DictReader(): Read CSV as dicts
+  - Each row becomes a dictionary
+  - Column names are keys
+
+### Error Handling:
+- FileNotFoundError: File doesn't exist (expected first run)
+- JSONDecodeError: When it occurs:
+  - Empty JSON file
+  - Manually edited incorrectly
+  - Partial dump/save
+  - Invalid JSON structure
+- Solution: try/except with fallback (start fresh)
+
+### Data Persistence:
+- load_contacts() on startup: Data survives restarts!
+- save_contacts() on exit: Changes are saved
+- Graceful degradation: If file missing/corrupted, start fresh
+
+## Deep Understanding
+
+**JSON vs Plain Text:**
+- JSON: Structured, nested data, easy to parse
+- Plain Text: Simple messages, unstructured
+
+**When JSON corrupts:**
+- Empty file
+- Manual editing errors
+- Incomplete save operation
+- Invalid structure
+
+**Real-world JSON uses:**
+- REST APIs (data exchange)
+- Configuration files (.json configs)
+- Web applications (data storage)
+- NoSQL databases (document storage)
+
+## What I'm Proud Of
+- Built 3 features (asked for 2!) ✅
+- Self-learned CSV module ✅
+- Data persists across restarts ✅
+- Export/import working perfectly ✅
+- THREE DAYS IN A ROW! ✅
+
+## Challenges
+- Small typos (conatct, lowe, serach) - will fix!
+
+## Time Spent: 2.5 hours
+## Streak: 🔥🔥🔥 Day 3/149
+## Feeling: UNSTOPPABLE! Three perfect days!
