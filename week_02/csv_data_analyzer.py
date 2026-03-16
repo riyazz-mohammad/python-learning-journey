@@ -16,7 +16,7 @@ def create_sample_csv():
         ['2026-03-05', 'Sofa', 'Furniture', '2', '25000', '50000']
     ]
        
-    with open('sales_data.csv','w') as file:
+    with open('sales_data.csv','w',newline='') as file:
               writer=csv.writer(file)
               writer.writerows(sales_data)
     print("Sample csv created:sales_data.csv")
@@ -152,7 +152,7 @@ def generate_report(data,filename='report.txt'):
                      for row in data:
                             cat=row['Category']
                             rev=float(row['Revenue'])
-                            categories.get(cat,0)+rev
+                            categories[cat]=categories.get(cat,0)+rev
                      file.write("CATEGORY BREAKDOWN:\n")
                      file.write("-"*40+"\n")
                      for cat,total in sorted(categories.items(),key=lambda x:x[1],reverse=True):
@@ -218,7 +218,7 @@ def main():
         display_menu()
         
         try:
-            choice = int(input("\nEnter choice (1-9): "))
+            choice = int(input("\nEnter choice (1-11): "))
             
             if choice == 1:
                 create_sample_csv()
