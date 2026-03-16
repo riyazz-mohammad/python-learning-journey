@@ -456,3 +456,44 @@ Contact Manager with JSON + CSV:
 ## Time Spent: 2.5 hours
 ## Streak: 🔥🔥🔥 Day 3/149
 ## Feeling: UNSTOPPABLE! Three perfect days!
+
+# Day 11 - March 11, 2026
+
+## What I Built
+CSV Data Analyzer:
+- Read CSV with DictReader
+- Display formatted tables
+- Statistics (sum, average, min, max, count)
+- Filter by conditions (>, <, ==, etc.)
+- Sort data (ascending/descending)
+- Group by category
+- Generate reports
+- Custom: [your features]
+
+## What I Learned Deeply
+
+### Data Analysis:
+- Extracting insights from data
+- Statistical measures: sum, average, min, max
+- Filtering: Finding specific data
+- Sorting: Organizing data
+- Grouping: Summarizing by category
+
+### Lambda Functions:
+- Anonymous functions: lambda x: x * 2
+- Used in sorted(), filter(), map()
+- Example: sorted(data, key=lambda row: row['Price'])
+- Cleaner than defining separate function
+
+### List Comprehensions:
+- [expression for item in list]
+- Example: [float(row['Price']) for row in data]
+- Faster and more readable than loops
+- Can include conditions: [x for x in list if x > 10]
+
+### Advanced CSV:
+- csv.DictReader: Each row as dictionary
+- Accessing data: row['ColumnName']
+- Better than positional indexing
+- Headers automatically become keys
+
